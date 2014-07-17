@@ -6,7 +6,7 @@
 Summary:	Ruby FTW - For The Web. Experimentation in web clients and servers
 Name:		ruby-%{pkgname}
 Version:	0.0.34
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
