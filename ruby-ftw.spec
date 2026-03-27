@@ -5,12 +5,12 @@
 %define	pkgname	ftw
 Summary:	Ruby FTW - For The Web. Experimentation in web clients and servers
 Name:		ruby-%{pkgname}
-Version:	0.0.34
-Release:	2
+Version:	0.0.49
+Release:	1
 License:	Apache v2.0
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
-# Source0-md5:	1ad00afe5009fdb887c70e3a107891e2
+# Source0-md5:	9784b1a7f4ddd4eff2e2c52211228524
 URL:		http://github.com/jordansissel/ruby-ftw
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.665
@@ -20,7 +20,7 @@ BuildRequires:	ruby-minitest
 Requires:	ruby-addressable
 Requires:	ruby-backports >= 2.6.2
 Requires:	ruby-cabin
-Requires:	ruby-http_parser.rb = 0.5.3
+Requires:	ruby-http_parser.rb >= 0.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,6 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README.md
 %{ruby_vendorlibdir}/%{pkgname}.rb
 %{ruby_vendorlibdir}/%{pkgname}
 %{ruby_specdir}/%{pkgname}-%{version}.gemspec
